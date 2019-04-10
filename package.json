@@ -1,0 +1,22 @@
+{
+  "name": "restfulapi",
+  "version": "1.0.0",
+  "description": "A node.js practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuinsLCH/restfulAPI.git"
+  },
+  "author": "LCH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RuinsLCH/restfulAPI/issues"
+  },
+  "homepage": "https://github.com/RuinsLCH/restfulAPI#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
