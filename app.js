@@ -2,9 +2,22 @@ const express = require('express');
 const app = express();
 const morgan = 	require('morgan');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
+
+
+/*const MongoClient = require('mongodb').MongoClient;
+const uri = 'mongodb+srv://test1:test1@node-restful-test-uum9v.mongodb.net/test?retryWrites=true';
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect();*/
+
+mongoose
+  .connect('mongodb+srv://test1:'+ process.env.MONGO_ATLAS_PW + '@node-restful-test-uum9v.mongodb.net/test?retryWrites=true', {useNewUrlParser: true})
+  .then(() => console.log("DB connected"))
+  .catch(err => console.log(err));
+
 
 
 app.use(morgan('dev'));
